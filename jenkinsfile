@@ -1,13 +1,7 @@
 pipeline {
     agent any
-
-    stages {
-        stage('Get Latest Sourcecode') {
-            steps {
-	        git 'https://github.com/Krishnateja5056/project.git'
-            }
-        }
-        stage('Unit_Testing') {
+       
+       stage('Unit_Testing') {
             steps {
                  sh '''cd unit_test
                         cmake CMakeLists.txt
